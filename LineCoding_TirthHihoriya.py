@@ -27,7 +27,7 @@ def _2B1Q(b):
  
     for i in range(0,len(b)-1,2):
         if(b[0]=='0' & b[1]=='0'):
-            output3.append(1)
+            output3.append(1)   # we can also appent only one bit ,  we have to understand the graph_plot in that way
             output3.append(1)
             
         elif(b[0]=='0' & b[1]=='1'):
