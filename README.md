@@ -1,3 +1,3 @@
 # DC_project
 
-Implementation of Different Line Coding Scheme Visually.
+This is a simple implementation of Different Line Coding Scheme Visually.
