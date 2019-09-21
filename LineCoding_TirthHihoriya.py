@@ -22,7 +22,7 @@ def NRZ_I(message):
             output2.append(flag)
     return output2
         
-def _2B1Q(b):
+def _2B1Q(b):   # `b` (bit)  is `message`
     output3 = []
  
     for i in range(0,len(b)-1,2):
