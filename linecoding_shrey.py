@@ -4,9 +4,9 @@ def polarRZ(message):
     output = []
     for x in text2binary(message):
         if (x == '0'):
-            output.append(-1)
+            output.append(-1) # -1 -> 1 and 0
         else:
-            output.append(+1)
+            output.append(+1) # 1 -> -1 and 0
     return output
 
 def AMI(message):
