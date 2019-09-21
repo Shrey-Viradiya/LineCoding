@@ -3,7 +3,7 @@ def NRZ_L(b):
     output1 =[] 
     for i in range(0,len(input)):
         if b[i]==0:
-            output1.append(1)
+            output.append(1)
         else:
             output1.append(-1)
     return output1
@@ -22,6 +22,4 @@ def NRZ_I(b):
         else:
             output2.append(flag)
     return output2
-
-
         
