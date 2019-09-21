@@ -11,7 +11,6 @@ def NRZ_L(b):
 def NRZ_I(b):
     output2 = []
     flag = 1
-
     for i in b:
         if(i == 1):
             if(flag == 1):
