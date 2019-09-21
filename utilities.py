@@ -1,7 +1,7 @@
 import cv2
 
 def text2binary(string):
-    output = ' '.join(format(ord(x), 'b') for x in string)
+    output = ''.join(format(ord(x), 'b') for x in string)
     return output
 
 def image_to_binary(data):
