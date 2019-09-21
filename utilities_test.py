@@ -1,4 +1,4 @@
-from utilities import *
+from utilities import image_to_binary
 import cv2 
 
 img = cv2.imread('small_image.png', 2)
