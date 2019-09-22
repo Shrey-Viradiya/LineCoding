@@ -22,9 +22,9 @@ def NRZ_I(message):
             output2.append(flag)
     return output2
         
-def _2B1Q(b):   # `b` (bit)  is `message`
+def _2B1Q(message):   # `b` (bit)  is `message`
     output3 = []
- 
+    b=text2binary(message)
     for i in range(0,len(b)-1,2):
         if(b[0]=='0' & b[1]=='0'):
             output3.append(1)   # we can also appent only one bit ,  we have to understand the graph_plot in that way
@@ -92,3 +92,17 @@ def manchester(message):
                                             #  and then while ploting, we will set the interval as half(0.5)
             
 
+def diff_manchester(message):
+    output = []
+    flag = 1
+    for i in text2binary(message):
+      
+        if(b == '1'):
+            if(flag == 1):
+                flag = -1
+            else:
+                flag = 1
+            output.append(flag)
+        else:
+            output.append(flag)
+    return output
