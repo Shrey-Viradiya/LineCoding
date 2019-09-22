@@ -105,8 +105,5 @@ def diff_manchester(message):
         elif b[0]=='1':
             output.append(-1)
             output.append(1)
-            c+=2
-        
-
-        
+            c+=2        
     return output
