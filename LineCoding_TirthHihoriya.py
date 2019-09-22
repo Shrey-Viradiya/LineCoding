@@ -94,15 +94,19 @@ def manchester(message):
 
 def diff_manchester(message):
     output = []
+    c=0
+    b = text2binary(message)
     flag = 1
-    for i in text2binary(message):
-      
-        if(b == '1'):
-            if(flag == 1):
-                flag = -1
-            else:
-                flag = 1
-            output.append(flag)
-        else:
-            output.append(flag)
+    for i in range(len(b)):
+        if b[0]=='0':
+            output.append(1)
+            output.append(-1)
+            c+=2
+        elif b[0]=='1':
+            output.append(-1)
+            output.append(1)
+            c+=2
+        
+
+        
     return output
