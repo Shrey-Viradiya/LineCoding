@@ -84,12 +84,12 @@ def manchester(message):
     output = []
     for x in text2binary(message):
         if (x == '0'):
-            output.append(1) # 1 -> 1 and -1       or we can do  output.append(1)
-        else:                               #                    output.append(-1)
-
-            output.append(-1) # -1 -> -1 and 1                   output.append(-1)
-    return output                           #                    output.append(1)
-                                            #  and then while ploting, we will set the interval as half(0.5)
+            output.append(1)
+            output.append(-1) 
+        else:
+            output.append(-1) 
+            output.append(1)
+    return output                          
             
 
 def diff_manchester(message):
