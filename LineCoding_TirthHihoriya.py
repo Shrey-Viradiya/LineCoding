@@ -77,6 +77,16 @@ def _2B1Q(b):   # `b` (bit)  is `message`
                 output3.append(2)
                 output3.append(2)
             
-    return output3    
+    return output3  
+
+
+def manchester(message):
+    output = []
+    for x in text2binary(message):
+        if (x == '0'):
+            output.append(1) # 1 -> 1 and -1
+        else:
+            output.append(-1) # -1 -> -1 and 1
+    return output  
             
 
