@@ -9,7 +9,8 @@ def polarRZ(message):
         else:
             output.append(+1)
             output.append(0)
-        return output
+
+    return output
 
 def AMI(message):
     output = []

@@ -26,24 +26,20 @@ def _2B1Q(message):   # `b` (bit)  is `message`
     output3 = []
     b=text2binary(message)
     for i in range(0,len(b)-1,2):
-        if(b[0]=='0' & b[1]=='0'):
+        if(b[0]=='0' and b[1]=='0'):
             output3.append(1)   # we can also appent only one bit ,  we have to understand the graph_plot in that way
             output3.append(1)
-            
-        elif(b[0]=='0' & b[1]=='1'):
+        elif(b[0]=='0' and b[1]=='1'):
+            output3.append(2)            
             output3.append(2)
+        elif(b[0]=='1' and b[1]=='0'):
+            output3.append(-1)            
+            output3.append(-1)
+        elif(b[0]=='1' and b[1]=='1'):
+            output3.append(-2) 
             output3.append(2)
-            
-        elif(b[0]=='1' & b[1]=='0'):
-            output3.append(-1)
-            output3.append(-1)
-            
-        elif(b[0]=='1' & b[1]=='1'):
-            output3.append(-2)
-            output3.append(-2)
-            
 
-        elif(b[i]=='0' & b[i+1]=='0'):
+        elif(b[i]=='0' and b[i+1]=='0'):
             if(output3[i-1]>0):
                 output3.append(1)
                 output3.append(1)     
@@ -51,7 +47,7 @@ def _2B1Q(message):   # `b` (bit)  is `message`
                 output3.append(-1)
                 output3.append(-1)
             
-        elif(b[i]=='0' & b[i+1]=='1'):
+        elif(b[i]=='0' and b[i+1]=='1'):
             if(output3[i-1]>0):
                 output3.append(2)
                 output3.append(2)   
@@ -59,7 +55,7 @@ def _2B1Q(message):   # `b` (bit)  is `message`
                 output3.append(-2)
                 output3.append(-2)
             
-        elif(b[i]=='1' & b[i+1]=='0'):
+        elif(b[i]=='1' and b[i+1]=='0'):
             if(output3[i-1]>0):
                 output3.append(-1)
                 output3.append(-1)
@@ -68,7 +64,7 @@ def _2B1Q(message):   # `b` (bit)  is `message`
                 output3.append(1)
                 output3.append(1)
             
-        elif(b[i]=='1' & b[i+1]=='1'):
+        elif(b[i]=='1' and b[i+1]=='1'):
             if(output3[i-1]>0):
                 output3.append(-2)
                 output3.append(-2)
