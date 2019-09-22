@@ -10,6 +10,7 @@
 # In Progress
 
 3) line coding algorithms
+7) image to binary
 
 # Done
 
