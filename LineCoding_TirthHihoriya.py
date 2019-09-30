@@ -122,10 +122,8 @@ def diff_manchester(message):
             elif output[c]==-1:
                 output.append(1)
                 output.append(-1)
-                c+=2
-
-
-
-
-            
+                c+=2            
     return output
+
+print(text2binary("Hello"))
+print(_2B1Q("Hello"))
