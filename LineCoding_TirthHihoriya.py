@@ -129,6 +129,7 @@ def MLT_3(message):
     output = []
     b = text2binary(message)
     for i in range(len(b)):
+        flag =1
         if i==0:
             if b[0]=='0':
                 output.append(0)
@@ -140,10 +141,12 @@ def MLT_3(message):
             if output[i-1]==1 or output[i-1]==-1:
                 output.append(0)
             else:
-                if output[i-2]==1:
+                if flag==1:
                     output.append(-1)
+                    flag=-1
                 else:
                     output.append(1)
+                    
     return output
 
 
