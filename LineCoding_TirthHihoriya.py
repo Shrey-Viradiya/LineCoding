@@ -104,5 +104,27 @@ def diff_manchester(message):
             output.append(-1)
             output.append(1)
             c+=2    
+        elif b[i] == '0':
+            if output[c]=='-1':
+                output.append(-1)
+                output.append(1)
+                c+=2
+            elif output[c]=='1':
+                output.append(1)
+                output.append(-1)
+                c+=2
+        elif b[i] == '1':
+            if output[c]=='1':
+                output.append(-1)
+                output.append(1)
+                c+=2
+            elif output[c]=='-1':
+                output.append(1)
+                output.append(-1)
+                c+=2
+
+
+
+
             
     return output
