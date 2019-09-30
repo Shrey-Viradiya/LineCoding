@@ -150,4 +150,4 @@ def MLT_3(message):
 
 
 print(text2binary("Hello"))
-print(_2B1Q("Hello"))
+print(MLT_3("Hello"))
