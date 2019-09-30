@@ -27,7 +27,7 @@ def _2B1Q(message):   # `b` (bit)  is `message`
     output3 = []
     b = text2binary(message)        # pls check the output of 2b1q  !!!
     for i in range(0,len(b)-1,2):
-        if(i=='0'):
+        if(i==0):
             if(b[0]=='0' and b[1]=='0'):
                 output3.append(1)   
                 output3.append(1)
@@ -92,18 +92,19 @@ def manchester(message):
 
 def diff_manchester(message):
     output = []
-    c=0
+    c=-1
     b = text2binary(message)
     flag = 1
     for i in range(len(b)):
-        if b[0]=='0':
-            output.append(1)
-            output.append(-1)
-            c+=2
-        elif b[0]=='1':
-            output.append(-1)
-            output.append(1)
-            c+=2    
+        if i==0:
+            if b[0]=='0':
+                output.append(1)
+                output.append(-1)
+                c+=2
+            elif b[0]=='1':
+                output.append(-1)
+                output.append(1)
+                c+=2    
         elif b[i] == '0':
             if output[c]=='-1':
                 output.append(-1)
