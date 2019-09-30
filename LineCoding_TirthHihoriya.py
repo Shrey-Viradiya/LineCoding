@@ -25,7 +25,7 @@ def NRZ_I(message):
         
 def _2B1Q(message):   # `b` (bit)  is `message`
     output3 = []
-    b=text2binary(message)
+    b = text2binary(message)
     for i in range(0,len(b)-1,2):
         if(i=='0'):
             if(b[0]=='0' and b[1]=='0'):
