@@ -128,8 +128,9 @@ def diff_manchester(message):
 def MLT_3(message):
     output = []
     b = text2binary(message)
+    flag =1
     for i in range(len(b)):
-        flag =1
+        
         if i==0:
             if b[0]=='0':
                 output.append(0)
@@ -146,7 +147,7 @@ def MLT_3(message):
                     flag=-1
                 else:
                     output.append(1)
-                    
+
     return output
 
 
