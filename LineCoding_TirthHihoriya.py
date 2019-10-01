@@ -198,6 +198,10 @@ def  B8ZS(message):
                 change = 1
     return output
     
+    def HDB_3(message):
+        output = []
+        b = message
+
 
     
     
