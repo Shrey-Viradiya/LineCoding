@@ -62,9 +62,17 @@ def B8ZS(message):
         output.append(x)
         tempstr = x[::-1]
         
-        for y in tempstr:
-            if y!= '0':
-                break
+        if(len(tempstr) > 1):
+            for _ in range(len(tempstr)):
+                if tempstr[_]!= '0':
+                    if tempstr[_+1] == '-1':
+                        y='-1'
+                        break
+                    else:
+                        y = '1'
+                        break
+        else:
+            y = tempstr
         
         if (y == '1'):
             output.append("0001-10-11")
@@ -73,4 +81,5 @@ def B8ZS(message):
 
     return "".join(output)
 
-print(B8ZS("10000000001010111010000001000000000001"))
+print(B8ZS("100000000 01010111010000001 000000000001"))
+10001-10-11 0-1010-11-101000000-1 0001-10-1100010001-10-11
