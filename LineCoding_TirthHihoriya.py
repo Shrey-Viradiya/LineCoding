@@ -147,6 +147,7 @@ def MLT_3(message):
                     flag=-1
                 else:
                     output.append(1)
+                    flag=1
 
     return output
 
