@@ -153,13 +153,12 @@ def MLT_3(message):
 
 def  B8ZS(message):
     output = []
-    # b = text2binary(message)
-    b = message
+    b = text2binary(message)
     change = 1
     i=0
     while(i<len(b)):
         if(i<(len(b)-8) and b[i]=='0' and b[i+1]=='0' and b[i+2]=='0' and b[i+3]=='0' and b[i+4]=='0' and b[i+5]=='0' and b[i+6]=='0' and b[i+7]=='0' and i!=0  ):
-            # print(i)
+            
             if b[i-1]=='1':
                 
                 output.append(0)
@@ -170,11 +169,9 @@ def  B8ZS(message):
                 output.append(0)
                 output.append(-1)
                 output.append(1)
-                
                 i+=9
                 
             else:
-                
                 output.append(0)
                 output.append(0)
                 output.append(0)
@@ -182,8 +179,7 @@ def  B8ZS(message):
                 output.append(1)
                 output.append(0)
                 output.append(1)
-                output.append(-1)
-                
+                output.append(-1) 
                 i+=9
                    
         elif (b[i] == '0'):
