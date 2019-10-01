@@ -148,8 +148,50 @@ def MLT_3(message):
                 else:
                     output.append(1)
                     flag=1
-
     return output
+
+
+def  B8ZS(message):
+    output = []
+    b = text2binary(message)
+    change = 1
+    for i in range(len(b)):
+        if(i<(range(len(b))-8) and b[i]=='0' and b[i+1]=='0' and b[i+2]=='0' and b[i+3]=='0' and b[i+4]=='0' and b[i+5]=='0' and b[i+6]=='0' and b[i+7]=='0' and i!=0  ):
+            if b[i-1]=='1':
+                output.append(0)
+                output.append(0)
+                output.append(0)
+                output.append(1)
+                output.append(-1)
+                output.append(0)
+                output.append(-1)
+                output.append(1)
+                i+=8
+            if b[i-1]=='-1':
+                output.append(0)
+                output.append(0)
+                output.append(0)
+                output.append(-1)
+                output.append(1)
+                output.append(0)
+                output.append(1)
+                output.append(-1)
+                i+=8
+
+
+            
+        if (b[i] == 0):
+            output.append(0)
+        else:
+            output.append(change)
+            if(change == 1):
+                change = -1
+            else:
+                change = 1
+    
+
+    
+    
 
 
 
