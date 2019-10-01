@@ -159,7 +159,7 @@ def  B8ZS(message):
     i=0
     while(i<len(b)):
         if(i<(len(b)-8) and b[i]=='0' and b[i+1]=='0' and b[i+2]=='0' and b[i+3]=='0' and b[i+4]=='0' and b[i+5]=='0' and b[i+6]=='0' and b[i+7]=='0' and i!=0  ):
-            print(i)
+            # print(i)
             if b[i-1]=='1':
                 
                 output.append(0)
@@ -205,5 +205,5 @@ def  B8ZS(message):
 
 
 
-print("1000000000 1010111010000001 00000000000 1")
-print(B8ZS("10000000001010111010000001000000000001"))
+print("1 0000 00 00 0 1010 11 101000000 1 0000 00 00 01")
+print(B8ZS("100000000010101110100000010000000001"))
