@@ -9,19 +9,16 @@ fig, ax = plt.subplots()
 def plot_polar(file_path):
     with open(file_path, 'r') as file:
         message = file.read()
-    coded_message = lcth.NRZ_L(message)
+    coded_message = lcs.AMI(message)
     ax.clear()
-    ax.text(0.5, 0.5, f"{coded_message}: {len(coded_message)}")
+    ax.text(0, 1.2, f"{coded_message}: {len(coded_message)}")
     x_dat = []
     j=0
-    k=0
-    for i in range(len(coded_message)):
-        if k == 2:
-            j = j + 1
-            k=0
-        x_dat.append(j)
-        k+=1
-    ax.plot(x_dat, coded_message, color='r')
+    for i in range(1, len(coded_message)):
+        ax.plot([j, j+1], [coded_message[i-1], coded_message[i-1]], color='g')
+        if coded_message[i-1] != coded_message[i]:
+            ax.plot([j+1, j+1], [coded_message[i-1], coded_message[i]], color='g')
+        j+=1
 
 def animate(i):
     plot_polar('message.txt')
