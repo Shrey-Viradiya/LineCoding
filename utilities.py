@@ -11,7 +11,7 @@ def text2binary(string):
 
     # creates a list of binary representation of each character
     # and joins the list to create full binary string
-    output = ''.join(format(ord(x), 'b') for x in string)
+    output = ''.join('{0:08b}'.format(ord(x), 'b') for x in string)
     return output
 
 def image_to_binary(data):

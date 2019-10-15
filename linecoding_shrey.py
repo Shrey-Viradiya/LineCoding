@@ -7,7 +7,7 @@ def polarRZ(message):
             output.append(-1)
             output.append(0)
         else:
-            output.append(+1)
+            output.append(1)
             output.append(0)
 
     return output
@@ -80,7 +80,3 @@ def B8ZS(message):
             output.append("000-1101-1")
 
     return "".join(output[:-1])
-print(B8ZS("1 0000 00 00 0 1010 11 101000000 1 0000 00 00 01"))
-#           1 0001-10-11 0-1010-11-101000000-1 0001-10-11 01
-# print(B8ZS("1 0000 0000  0 1010 11 101000000 1 0000 00 00 0001"))
-#           1 0001-10-11 0-1010-11-101000000-1 0001-10-11 0001
