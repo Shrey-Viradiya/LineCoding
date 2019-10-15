@@ -81,7 +81,6 @@ def B8ZS(message):
 
     return "".join(output[:-1])
 
-
 def NRZ_L(message):
     output1 =[]
     for b in text2binary(message):
@@ -281,7 +280,7 @@ def HDB_3(message):
         #b = text2binary(message)
         b = message
         change = 1
-        i=0                              #"110000 0000 1100001001"
+        i=0                             
         c=0    # counter
         while(i<len(b)):
             if(i<(len(b)-4) and b[i]=='0' and b[i+1]=='0' and b[i+2]=='0' and b[i+3]=='0'and i!=0):
@@ -298,21 +297,21 @@ def HDB_3(message):
                         output.append(-1)
                         output.append(0)
                         output.append(0)
-                        output.append(-1)
-                        change = 1
+                        output.append(-1)   
+                       
                 else:
                     if(c%2==1):
                         output.append(0)
                         output.append(0)
                         output.append(0)
                         output.append(-1)
-                        change = 1
+                        change = -1
+                        
                     else:
                         output.append(1)
                         output.append(0)
                         output.append(0)
-                        output.append(1)
-                        change = -1
+                        output.append(1)   
                 c=0
                 i+=4
 
