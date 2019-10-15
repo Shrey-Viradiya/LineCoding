@@ -248,6 +248,7 @@ def HDB_3(message):
                     change = 1
                     c+=1
         return output
+        
     
     
 
