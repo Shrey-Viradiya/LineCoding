@@ -46,6 +46,7 @@ def ami():
     ax.set_title('AMI')
     plt.xticks(range(len(coded_message)))
     plt.yticks([-2,-1,0,1,2])
+    plt.ylim((-2.2,2.2))
     plt.grid()
     x_dat = []
     j=0
