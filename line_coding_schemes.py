@@ -243,21 +243,21 @@ def HDB_3(message):
                         output.append(-1)
                         output.append(0)
                         output.append(0)
-                        output.append(-1)
-                        change = 1
+                        output.append(-1)   
+                       
                 else:
                     if(c%2==1):
                         output.append(0)
                         output.append(0)
                         output.append(0)
                         output.append(-1)
-                        change = 1
+                        change = -1
+                        
                     else:
                         output.append(1)
                         output.append(0)
                         output.append(0)
-                        output.append(1)
-                        change = -1
+                        output.append(1)   
                 c=0
                 i+=4
             elif (b[i] == '0'):
