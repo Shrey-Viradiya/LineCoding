@@ -1,7 +1,8 @@
 #from utilities import text2binary
+from utilities import text2binary
 
 def NRZ_L(message):
-    output1 =[] 
+    output1 =[]
     for b in text2binary(message):
         if b=='0':
             output1.append(1)
@@ -199,11 +200,12 @@ def HDB_3(message):
         #b = text2binary(message)
         b = message
         change = 1
-        i=0
+        i=0                              #"110000 0000 1100001001"
         c=0    # counter
         while(i<len(b)):
             if(i<(len(b)-4) and b[i]=='0' and b[i+1]=='0' and b[i+2]=='0' and b[i+3]=='0'and i!=0):
-                if(b[i-1]=='1'):
+                
+                if(change == -1):
                     if(c%2==1):
                         output.append(0)
                         output.append(0)
@@ -231,7 +233,7 @@ def HDB_3(message):
                         output.append(1)
                         change = -1
                 c=0
-                i+=5
+                i+=4
 
 
         
@@ -248,11 +250,4 @@ def HDB_3(message):
                     change = 1
                     c+=1
         return output
-    
-    
 
-
-
-
-print("1 0000 0000 0 1010 11 101000000 1 0000 00 00 01")
-print(HDB_3("100000000010101110100000010000000001"))
