@@ -40,48 +40,6 @@ def pseudoternary(message):
                 change = 1
     return output
 
-def B8ZS(message):
-    output = []
-    change = 1
-    # for x in text2binary(message):
-    for x in message:
-        if (x == '0'):
-            output.append('0')
-        else:
-            output.append(str(change))
-            if(change == 1):
-                change = -1
-            else:
-                change = 1
-
-    temp = "".join(output)
-    temp = temp.split("00000000")
-
-    output = []
-    for x in temp:
-        output.append(x)
-        tempstr = x[::-1]
-        
-        if(len(tempstr) > 1):
-            for _ in range(len(tempstr)):
-                if tempstr[_]!= '0':
-                    if tempstr[_+1] == '-1':
-                        y='-1'
-                        break
-                    else:
-                        y = '1'
-                        break
-        else:
-            y = tempstr
-        
-        if (y == '1'):
-            output.append("0001-10-11")
-        elif(y== '-1'):
-            output.append("000-1101-1")
-
-    return "".join(output[:-1])
-
-
 def NRZ_L(message):
     output1 =[]
     for b in text2binary(message):
@@ -105,9 +63,9 @@ def NRZ_I(message):
             output2.append(flag)
     return output2
         
-def _2B1Q(message):   # `b` (bit)  is `message`
+def twoBoneQ(message):
     output3 = []
-    b = text2binary(message)        # pls check the output of 2b1q  !!!
+    b = text2binary(message)  # pls check the output of 2b1q  !!!
     for i in range(0,len(b)-1,2):
         if(i==0):
             if(b[0]=='0' and b[1]=='0'):
@@ -122,7 +80,6 @@ def _2B1Q(message):   # `b` (bit)  is `message`
             elif(b[0]=='1' and b[1]=='1'):
                 output3.append(-2) 
                 output3.append(2)
-
         elif(b[i]=='0' and b[i+1]=='0'):
             if(output3[i-1]>0):
                 output3.append(1)
@@ -130,7 +87,6 @@ def _2B1Q(message):   # `b` (bit)  is `message`
             else:
                 output3.append(-1)
                 output3.append(-1)
-            
         elif(b[i]=='0' and b[i+1]=='1'):
             if(output3[i-1]>0):
                 output3.append(2)
@@ -138,21 +94,17 @@ def _2B1Q(message):   # `b` (bit)  is `message`
             else:
                 output3.append(-2)
                 output3.append(-2)
-            
         elif(b[i]=='1' and b[i+1]=='0'):
             if(output3[i-1]>0):
                 output3.append(-1)
                 output3.append(-1)
-                
             else:
                 output3.append(1)
                 output3.append(1)
-            
         elif(b[i]=='1' and b[i+1]=='1'):
             if(output3[i-1]>0):
                 output3.append(-2)
                 output3.append(-2)
-                
             else:
                 output3.append(2)
                 output3.append(2)
@@ -210,9 +162,8 @@ def diff_manchester(message):
 def MLT_3(message):
     output = []
     b = text2binary(message)
-    flag =1
+    flag =-1
     for i in range(len(b)):
-        
         if i==0:
             if b[0]=='0':
                 output.append(0)
@@ -240,9 +191,7 @@ def  B8ZS(message):
     i=0
     while(i<len(b)):
         if(i<(len(b)-8) and b[i]=='0' and b[i+1]=='0' and b[i+2]=='0' and b[i+3]=='0' and b[i+4]=='0' and b[i+5]=='0' and b[i+6]=='0' and b[i+7]=='0' and i!=0  ):
-            
-            if b[i-1]=='1':
-                
+            if change==-1:
                 output.append(0)
                 output.append(0)
                 output.append(0)
@@ -251,8 +200,7 @@ def  B8ZS(message):
                 output.append(0)
                 output.append(-1)
                 output.append(1)
-                i+=9
-                
+                i+=8
             else:
                 output.append(0)
                 output.append(0)
@@ -262,8 +210,7 @@ def  B8ZS(message):
                 output.append(0)
                 output.append(1)
                 output.append(-1) 
-                i+=9
-                   
+                i+=8
         elif (b[i] == '0'):
             output.append(0)
             i+=1
@@ -279,13 +226,12 @@ def  B8ZS(message):
 def HDB_3(message):
         output = []
         #b = text2binary(message)
-        b = message
+        b = "110000100000101100001"
         change = 1
-        i=0                              #"110000 0000 1100001001"
+        i=0    #"110000 0000 1100001001"
         c=0    # counter
         while(i<len(b)):
             if(i<(len(b)-4) and b[i]=='0' and b[i+1]=='0' and b[i+2]=='0' and b[i+3]=='0'and i!=0):
-                
                 if(change == -1):
                     if(c%2==1):
                         output.append(0)
@@ -293,7 +239,6 @@ def HDB_3(message):
                         output.append(0)
                         output.append(1)
                         change = -1
-                        
                     else:
                         output.append(-1)
                         output.append(0)
@@ -315,9 +260,6 @@ def HDB_3(message):
                         change = -1
                 c=0
                 i+=4
-
-
-        
             elif (b[i] == '0'):
                 output.append(0)
                 i+=1
@@ -331,4 +273,3 @@ def HDB_3(message):
                     change = 1
                     c+=1
         return output
-
