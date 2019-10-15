@@ -9,9 +9,9 @@ from matplotlib.figure import Figure
 from line_coding_schemes import *
 import utilities as utils
 import matplotlib.pyplot as plt
-from matplotlib.animation import FuncAnimation
 from matplotlib import style
-# style.use("dark_background")
+import sys
+style.use("seaborn-ticks")
 
 fig = plt.figure(figsize=(10,10))
 ax = fig.add_subplot(111)
@@ -60,45 +60,15 @@ def ami():
     canvas.get_tk_widget().pack(fill= BOTH)
     canvas.draw()
 
-def animate(i):
-    ami()
-
 x = Button(bot_top_frame, text='AMI',fg="blue", command = ami)
 x.pack()
-ani = FuncAnimation(fig, animate, interval=1000)
+
 canvas = FigureCanvasTkAgg(fig, bot_top_frame)
 canvas.get_tk_widget().pack(fill= BOTH)
-
-# img = ImageTk.PhotoImage(PIL.Image.open("temp.jpg"))
-# panel = Label(app, image = img)
 
 bottom_frame = Frame(app, height = 400)
 bottom_frame.pack(side = BOTTOM)
 
-# exit
 exit = Button(bottom_frame, text='Stop',fg="red" ,width=25, command=app.destroy)
 exit.pack()
-
-
-
-# top_space = Canvas(app, width=10, height=25) 
-# top_space.grid(row = 0,column = 2)
-
-
-
-# middle_space = Canvas(app, width=10, height=25)
-# middle_space.grid(row = 2,column = 2) 
-
-
-
-
-
-
-# #  
-
-
-
-# bottom_space = Canvas(app, width=10, height=25)
-# bottom_space.grid(row = 7,column = 0) 
-
 app.mainloop()
