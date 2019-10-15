@@ -1,5 +1,5 @@
 #from utilities import text2binary
-from utilities import text2binary
+from ..utilities import text2binary
 
 def NRZ_L(message):
     output1 =[]

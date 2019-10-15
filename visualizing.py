@@ -1,7 +1,7 @@
-import LineCoding_TirthHihoriya as lcth 
-import utilities as utils 
-import linecoding_shrey as lcs 
-import matplotlib.pyplot as plt 
+import line_coding.LineCoding_TirthHihoriya as lcth 
+import utilities as utils
+import line_coding.linecoding_shrey as lcs
+import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 
 fig, ax = plt.subplots()
@@ -9,7 +9,7 @@ fig, ax = plt.subplots()
 def plot_polar(file_path):
     with open(file_path, 'r') as file:
         message = file.read()
-    coded_message = lcs.AMI(message)
+    coded_message = lcth.NRZ_L(message)
     ax.clear()
     ax.text(0, 1.2, f"{coded_message}: {len(coded_message)}")
     x_dat = []

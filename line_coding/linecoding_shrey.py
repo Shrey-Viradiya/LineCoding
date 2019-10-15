@@ -1,4 +1,4 @@
-from utilities import text2binary
+from ..utilities import text2binary
 
 def polarRZ(message):
     output = []
