@@ -14,7 +14,7 @@ def plot_polar(file_path):
     ax.text(0, 1.2, f"message: {message}, coded: {utils.text2binary(message)}, Coding to {code_type}")
     plt.xticks(range(len(coded_message)))
     plt.yticks([-2,-1,0,1,2])
-    plt.ylim(min=-2.2, max=2.2)
+    plt.ylim((-2.2, 2.2))
     plt.grid()
     x_dat = []
     j=0
