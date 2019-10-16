@@ -11,7 +11,8 @@ import utilities as utils
 import matplotlib.pyplot as plt
 from matplotlib import style
 import sys
-style.use("seaborn-ticks")
+import math
+style.use("fast")
 
 fig = plt.figure(figsize=(10,10))
 ax = fig.add_subplot(111)
@@ -44,9 +45,9 @@ def ami():
     ax.clear()
     ax.text(0.1, 1.3, f"message: {message}, coded: {utils.text2binary(message)}, Coding to {code_type}")
     ax.set_title('AMI')
-    plt.xticks(range(len(coded_message)))
+    plt.xticks(range(len(coded_message)+1))
     plt.yticks([-2,-1,0,1,2])
-    plt.ylim((-2.2,2.2))
+    plt.ylim((-math.log(len(coded_message)+1, 2),math.log(len(coded_message)+1, 2)))
     plt.grid()
     x_dat = []
     j=0
