@@ -68,6 +68,7 @@ def ami():
 
 x = Button(bot_top_frame, text='AMI',fg="blue", command = ami, activebackground = "orange", bg = "yellow")
 x.pack(side = "left")
+x.place(x=80,y=30,anchor = "center")
 
 # pseudoternary button
 def pseudoternary_t():
@@ -81,6 +82,7 @@ def pseudoternary_t():
 
 x = Button(bot_top_frame, text='pseudoternary',fg="blue", command = pseudoternary_t, activebackground = "orange", bg = "yellow")
 x.pack(side = "left")
+x.place(x=160,y=30,anchor = "center")
 
 
 # NRZ_I button
@@ -95,6 +97,8 @@ def nrz_i():
 
 x = Button(bot_top_frame, text='NRZ_I',fg="blue", command = nrz_i, activebackground = "orange", bg = "yellow")
 x.pack(side = "left")
+x.place(x=250,y=30,anchor = "center")
+
 
 
 # NRZ_L button
@@ -109,6 +113,7 @@ def nrz_l():
 
 x = Button(bot_top_frame, text='NRZ_L',fg="blue", command = nrz_l, activebackground = "orange", bg = "yellow")
 x.pack(side = "left")
+x.place(x=320,y=30,anchor = "center")
 
 
 
@@ -124,6 +129,7 @@ def polar_rz():
 
 x = Button(bot_top_frame, text='polarRZ',fg="blue", command = polar_rz, activebackground = "orange", bg = "yellow")
 x.pack(side = "left")
+x.place(x=400,y=30,anchor = "center")
 
 # twoBoneQ button
 def twoB1Q():
@@ -137,6 +143,7 @@ def twoB1Q():
 
 x = Button(bot_top_frame, text='2B1Q',fg="blue", command = twoB1Q, activebackground = "orange", bg = "yellow")
 x.pack(side = "left")
+x.place(x=475,y=30,anchor = "center")
 
 # Manchester button
 def manchester():
@@ -150,6 +157,7 @@ def manchester():
 
 x = Button(bot_top_frame, text='Manchester',fg="blue", command = manchester, activebackground = "orange", bg = "yellow")
 x.pack(side = "left")
+x.place(x=560,y=30,anchor = "center")
 
 
 # diff_Manchester button
@@ -164,7 +172,7 @@ def diff_manchester():
 
 x = Button(bot_top_frame, text='diff_Manchester',fg="blue", command = diff_manchester, activebackground = "orange", bg = "yellow")
 x.pack(side = "left")
-
+x.place(x=675,y=30,anchor = "center")
 
 
 # MLT_3 button
@@ -179,6 +187,8 @@ def mlt_3():
 
 x = Button(bot_top_frame, text='MLT_3',fg="blue", command = mlt_3, activebackground = "orange", bg = "yellow")
 x.pack(side = "left")
+x.place(x=775,y=30,anchor = "center")
+
 
 
 
@@ -194,6 +204,8 @@ def b8zS():
 
 x = Button(bot_top_frame, text='B8ZS',fg="blue", command = b8zS, activebackground = "orange", bg = "yellow")
 x.pack(side = "left")
+x.place(x=848,y=30,anchor = "center")
+
 
 
 # HDB_3 button
@@ -208,14 +220,18 @@ def hbd_3():
 
 x = Button(bot_top_frame, text='HDB_3',fg="blue", command = hbd_3, activebackground = "orange", bg = "yellow")
 x.pack(side = "left")
+x.place(x=920,y=30,anchor = "center")
 
 
 canvas = FigureCanvasTkAgg(fig, bot_top_frame)
 canvas.get_tk_widget().pack(fill= BOTH)
 
-bottom_frame = Frame(app, height = 400)
+
+bottom_frame = Frame(app, height = 100)
 bottom_frame.pack(side = "bottom")
+bottom_frame.place(x=750,y=780,anchor = "center")
 
 exit = Button(bottom_frame, text='Stop',fg="red" ,width=25, command=app.destroy)
+
 exit.pack()
 app.mainloop()
