@@ -227,11 +227,11 @@ canvas = FigureCanvasTkAgg(fig, bot_top_frame)
 canvas.get_tk_widget().pack(fill= BOTH)
 
 
-bottom_frame = Frame(app, height = 100)
+bottom_frame = Frame(app)
 bottom_frame.pack(side = "bottom")
 bottom_frame.place(x=750,y=780,anchor = "center")
 
-exit = Button(bottom_frame, text='Stop',fg="red" ,width=25, command=app.destroy)
+exit = Button(bottom_frame, text='Exit',fg="red" ,width=25, command=app.destroy)
 
 exit.pack()
 app.mainloop()
