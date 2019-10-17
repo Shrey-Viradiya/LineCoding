@@ -112,7 +112,7 @@ def twoBoneQ(message):
     return output3  
 
 
-def manchester(message):
+def Manchester(message):
     output = []
     for x in text2binary(message):
         if (x == '0'):
@@ -124,7 +124,7 @@ def manchester(message):
     return output                          
             
 
-def diff_manchester(message):
+def diff_Manchester(message):
     output = []
     c=-1
     b = text2binary(message)
