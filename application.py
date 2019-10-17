@@ -31,7 +31,7 @@ e1.pack()
 bot_top_frame = Frame(top_frame)
 bot_top_frame.pack(side = BOTTOM)
 
-lbl = Label(bot_top_frame, text="Output here") 
+lbl = Label(top_frame, text="Output here") 
 lbl.pack()
 
 def plot_on_canvas(message, func, code_type):
@@ -66,7 +66,7 @@ def ami():
     code_type = 'AMI'
     plot_on_canvas(message, AMI, code_type)
 
-x = Button(bot_top_frame, text='AMI',fg="blue", command = ami, activebackground = "orange", bg = "yellow")
+x = Button(top_frame, text='AMI',fg="blue", command = ami, activebackground = "orange", bg = "yellow")
 x.pack(side = "left")
 x.place(x=80,y=30,anchor = "center")
 
@@ -80,7 +80,7 @@ def pseudoternary_t():
     code_type = 'pseudoternary'
     plot_on_canvas(message, pseudoternary, code_type)
 
-x = Button(bot_top_frame, text='pseudoternary',fg="blue", command = pseudoternary_t, activebackground = "orange", bg = "yellow")
+x = Button(top_frame, text='pseudoternary',fg="blue", command = pseudoternary_t, activebackground = "orange", bg = "yellow")
 x.pack(side = "left")
 x.place(x=160,y=30,anchor = "center")
 
@@ -95,7 +95,7 @@ def nrz_i():
     code_type = 'NRZ_I'
     plot_on_canvas(message, NRZ_I, code_type)
 
-x = Button(bot_top_frame, text='NRZ_I',fg="blue", command = nrz_i, activebackground = "orange", bg = "yellow")
+x = Button(top_frame, text='NRZ_I',fg="blue", command = nrz_i, activebackground = "orange", bg = "yellow")
 x.pack(side = "left")
 x.place(x=250,y=30,anchor = "center")
 
@@ -111,7 +111,7 @@ def nrz_l():
     code_type = 'NRZ_L'
     plot_on_canvas(message, NRZ_L, code_type)
 
-x = Button(bot_top_frame, text='NRZ_L',fg="blue", command = nrz_l, activebackground = "orange", bg = "yellow")
+x = Button(top_frame, text='NRZ_L',fg="blue", command = nrz_l, activebackground = "orange", bg = "yellow")
 x.pack(side = "left")
 x.place(x=320,y=30,anchor = "center")
 
@@ -127,7 +127,7 @@ def polar_rz():
     code_type = 'polarRZ'
     plot_on_canvas(message, polarRZ, code_type)
 
-x = Button(bot_top_frame, text='polarRZ',fg="blue", command = polar_rz, activebackground = "orange", bg = "yellow")
+x = Button(top_frame, text='polarRZ',fg="blue", command = polar_rz, activebackground = "orange", bg = "yellow")
 x.pack(side = "left")
 x.place(x=400,y=30,anchor = "center")
 
@@ -141,7 +141,7 @@ def twoB1Q():
     code_type = 'twoBoneQ'
     plot_on_canvas(message, twoBoneQ, code_type)
 
-x = Button(bot_top_frame, text='2B1Q',fg="blue", command = twoB1Q, activebackground = "orange", bg = "yellow")
+x = Button(top_frame, text='2B1Q',fg="blue", command = twoB1Q, activebackground = "orange", bg = "yellow")
 x.pack(side = "left")
 x.place(x=475,y=30,anchor = "center")
 
@@ -155,7 +155,7 @@ def manchester():
     code_type = 'Manchester'
     plot_on_canvas(message, Manchester, code_type)
 
-x = Button(bot_top_frame, text='Manchester',fg="blue", command = manchester, activebackground = "orange", bg = "yellow")
+x = Button(top_frame, text='Manchester',fg="blue", command = manchester, activebackground = "orange", bg = "yellow")
 x.pack(side = "left")
 x.place(x=560,y=30,anchor = "center")
 
@@ -170,7 +170,7 @@ def diff_manchester():
     code_type = 'diff_Manchester'
     plot_on_canvas(message, diff_Manchester, code_type)
 
-x = Button(bot_top_frame, text='diff_Manchester',fg="blue", command = diff_manchester, activebackground = "orange", bg = "yellow")
+x = Button(top_frame, text='diff_Manchester',fg="blue", command = diff_manchester, activebackground = "orange", bg = "yellow")
 x.pack(side = "left")
 x.place(x=675,y=30,anchor = "center")
 
@@ -185,7 +185,7 @@ def mlt_3():
     code_type = 'MLT_3'
     plot_on_canvas(message, MLT_3, code_type)
 
-x = Button(bot_top_frame, text='MLT_3',fg="blue", command = mlt_3, activebackground = "orange", bg = "yellow")
+x = Button(top_frame, text='MLT_3',fg="blue", command = mlt_3, activebackground = "orange", bg = "yellow")
 x.pack(side = "left")
 x.place(x=775,y=30,anchor = "center")
 
@@ -202,7 +202,7 @@ def b8zS():
     code_type = 'B8ZS'
     plot_on_canvas(message, B8ZS, code_type)
 
-x = Button(bot_top_frame, text='B8ZS',fg="blue", command = b8zS, activebackground = "orange", bg = "yellow")
+x = Button(top_frame, text='B8ZS',fg="blue", command = b8zS, activebackground = "orange", bg = "yellow")
 x.pack(side = "left")
 x.place(x=848,y=30,anchor = "center")
 
@@ -218,7 +218,7 @@ def hbd_3():
     code_type = 'HDB_3'
     plot_on_canvas(message, HDB_3, code_type)
 
-x = Button(bot_top_frame, text='HDB_3',fg="blue", command = hbd_3, activebackground = "orange", bg = "yellow")
+x = Button(top_frame, text='HDB_3',fg="blue", command = hbd_3, activebackground = "orange", bg = "yellow")
 x.pack(side = "left")
 x.place(x=920,y=30,anchor = "center")
 
