@@ -225,8 +225,8 @@ def  B8ZS(message):
     
 def HDB_3(message):
         output = []
-        #b = text2binary(message)
-        b = "110000100000101100001"
+        b = text2binary(message)
+        # b = "110000100000101100001"
         change = 1
         i=0    #"110000 0000 1100001001"
         c=0    # counter

@@ -41,7 +41,7 @@ lbl.pack()
 def plot_on_canvas(message, func, code_type):
     coded_message = func(message)
     ax.clear()
-    ax.text(0.2, 1.8, f"binary: {utils.text2binary(message)}")
+    ax.text(0., 3., f"Binary: {utils.text2binary(message)}")
     ax.set_title(code_type)
     plt.xticks(range(len(coded_message)+1))
     plt.yticks([-2,-1,0,1,2])
@@ -79,12 +79,12 @@ def pseudoternary_t():
     message = e1.get()
     # res= ''.join(str(x) for x in message)
     lbl.configure(text=message)
-    ax.set_title('pseudoternary')
+    ax.set_title('Pseudoternary')
     # print(message)
-    code_type = 'pseudoternary'
+    code_type = 'Pseudoternary'
     plot_on_canvas(message, pseudoternary, code_type)
 
-x = Button(bot_top_frame, text='pseudoternary',fg="#307867", command = pseudoternary_t, activebackground = "orange", bg = "yellow")
+x = Button(bot_top_frame, text='Pseudoternary',fg="#307867", command = pseudoternary_t, activebackground = "orange", bg = "yellow")
 x.pack(side = LEFT)
 # x.place(x=160,y=130,anchor = "center")
 
@@ -94,12 +94,12 @@ def nrz_i():
     message = e1.get()
     # res= ''.join(str(x) for x in message)
     lbl.configure(text=message)
-    ax.set_title('NRZ_I')
+    ax.set_title('NRZ I')
     # print(message)
-    code_type = 'NRZ_I'
+    code_type = 'NRZ I'
     plot_on_canvas(message, NRZ_I, code_type)
 
-x = Button(bot_top_frame, text='NRZ_I',fg="yellow", command = nrz_i, activebackground = "orange", bg = "#307867")
+x = Button(bot_top_frame, text='NRZ I',fg="yellow", command = nrz_i, activebackground = "orange", bg = "#307867")
 x.pack(side = LEFT)
 # x.place(x=250,y=130,anchor = "center")
 
@@ -110,12 +110,12 @@ def nrz_l():
     message = e1.get()
     # res= ''.join(str(x) for x in message)
     lbl.configure(text=message)
-    ax.set_title('NRZ_L')
+    ax.set_title('NRZ L')
     # print(message)
-    code_type = 'NRZ_L'
+    code_type = 'NRZ L'
     plot_on_canvas(message, NRZ_L, code_type)
 
-x = Button(bot_top_frame, text='NRZ_L',fg="#307867", command = nrz_l, activebackground = "orange", bg = "yellow")
+x = Button(bot_top_frame, text='NRZ L',fg="#307867", command = nrz_l, activebackground = "orange", bg = "yellow")
 x.pack(side = LEFT)
 # x.place(x=320,y=130,anchor = "center")
 
@@ -126,12 +126,12 @@ def polar_rz():
     message = e1.get()
     # res= ''.join(str(x) for x in message)
     lbl.configure(text=message)
-    ax.set_title('polarRZ')
+    ax.set_title('Polar RZ')
     # print(message)
-    code_type = 'polarRZ'
+    code_type = 'Polar RZ'
     plot_on_canvas(message, polarRZ, code_type)
 
-x = Button(bot_top_frame, text='polarRZ',fg="yellow", command = polar_rz, activebackground = "orange", bg = "#307867")
+x = Button(bot_top_frame, text='Polar RZ',fg="yellow", command = polar_rz, activebackground = "orange", bg = "#307867")
 x.pack(side = LEFT)
 # x.place(x=400,y=130,anchor = "center")
 
@@ -140,9 +140,9 @@ def twoB1Q():
     message = e1.get()
     # res= ''.join(str(x) for x in message)
     lbl.configure(text=message)
-    ax.set_title('twoBoneQ')
+    ax.set_title('2B1Q')
     # print(message)
-    code_type = 'twoBoneQ'
+    code_type = '2B1Q'
     plot_on_canvas(message, twoBoneQ, code_type)
 
 x = Button(bot_top_frame, text='2B1Q',fg="#307867", command = twoB1Q, activebackground = "orange", bg = "yellow")
@@ -169,12 +169,12 @@ def diff_manchester():
     message = e1.get()
     # res= ''.join(str(x) for x in message)
     lbl.configure(text=message)
-    ax.set_title('diff_Manchester')
+    ax.set_title('Diffrential Manchester')
     # print(message)
-    code_type = 'diff_Manchester'
+    code_type = 'Diffrential Manchester'
     plot_on_canvas(message, diff_Manchester, code_type)
 
-x = Button(bot_top_frame, text='diff_Manchester',fg="#307867", command = diff_manchester, activebackground = "orange", bg = "yellow")
+x = Button(bot_top_frame, text='Diffrential Manchester',fg="#307867", command = diff_manchester, activebackground = "orange", bg = "yellow")
 x.pack(side = LEFT)
 # x.place(x=675,y=130,anchor = "center")
 
@@ -184,12 +184,12 @@ def mlt_3():
     message = e1.get()
     # res= ''.join(str(x) for x in message)
     lbl.configure(text=message)
-    ax.set_title('MLT_3')
+    ax.set_title('MLT 3')
     # print(message)
-    code_type = 'MLT_3'
+    code_type = 'MLT 3'
     plot_on_canvas(message, MLT_3, code_type)
 
-x = Button(bot_top_frame, text='MLT_3',fg="yellow", command = mlt_3, activebackground = "orange", bg = "#307867")
+x = Button(bot_top_frame, text='MLT 3',fg="yellow", command = mlt_3, activebackground = "orange", bg = "#307867")
 x.pack(side = LEFT)
 # x.place(x=775,y=130,anchor = "center")
 
@@ -217,12 +217,12 @@ def hbd_3():
     message = e1.get()
     # res= ''.join(str(x) for x in message)
     lbl.configure(text=message)
-    ax.set_title('HDB_3')
+    ax.set_title('HDB 3')
     # print(message)
-    code_type = 'HDB_3'
+    code_type = 'HDB 3'
     plot_on_canvas(message, HDB_3, code_type)
 
-x = Button(bot_top_frame, text='HDB_3',fg="yellow", command = hbd_3, activebackground = "orange", bg = "#307867")
+x = Button(bot_top_frame, text='HDB 3',fg="yellow", command = hbd_3, activebackground = "orange", bg = "#307867")
 x.pack(side = LEFT)
 # x.place(x=920,y=130,anchor = "center")
 
