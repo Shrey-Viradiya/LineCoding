@@ -50,13 +50,22 @@ def plot_on_canvas(message, func, code_type):
     x_dat = []
     j=0
     for i in range(1, len(coded_message)+1):
-        try:
-            ax.plot([j, j+1], [coded_message[i-1], coded_message[i-1]], color='g')
-            if coded_message[i-1] != coded_message[i]:
-                ax.plot([j+1, j+1], [coded_message[i-1], coded_message[i]], color='g')
-        except:
-            ax.plot([j, j+1], [coded_message[i-1], coded_message[i-1]], color='g')
-        j+=1
+        if code_type in ['Manchester', 'Diffrential Manchester', 'Polar RZ', '2B1Q']:
+            try:
+                ax.plot([j, j+0.5], [coded_message[i-1], coded_message[i-1]], color='g')
+                if coded_message[i-1] != coded_message[i]:
+                    ax.plot([j+0.5, j+0.5], [coded_message[i-1], coded_message[i]], color='g')
+            except:
+                ax.plot([j, j+0.5], [coded_message[i-1], coded_message[i-1]], color='g')
+            j+=0.5
+        else:
+            try:
+                ax.plot([j, j+1], [coded_message[i-1], coded_message[i-1]], color='g')
+                if coded_message[i-1] != coded_message[i]:
+                    ax.plot([j+1, j+1], [coded_message[i-1], coded_message[i]], color='g')
+            except:
+                ax.plot([j, j+1], [coded_message[i-1], coded_message[i-1]], color='g')
+            j+=1
     canvas.get_tk_widget().pack(fill= BOTH, side = TOP)
     canvas.draw()
 
