@@ -40,13 +40,15 @@ lbl.pack()
 
 def plot_on_canvas(message, func, code_type):
     coded_message = func(message)
+    text_style = dict(fontsize=12, fontdict={'family': 'verdana'})
+    if len(message) >= 10:
+        text_style = dict(fontsize=100/len(message), fontdict={'family': 'verdana'})
     ax.clear()
-    ax.text(0., 3., f"Binary: {utils.text2binary(message)}")
+    ax.text(0., 3., f"Binary: {utils.text2binary(message)}", **text_style)
     ax.set_title(code_type)
     plt.xticks(range(len(coded_message)+1))
     plt.yticks([-2,-1,0,1,2])
     plt.ylim((-math.log(len(coded_message)+1, 2),math.log(len(coded_message)+1, 2)))
-    # plt.grid()
     x_dat = []
     j=0
     for i in range(1, len(coded_message)+1):
