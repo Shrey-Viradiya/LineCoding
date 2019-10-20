@@ -4,7 +4,7 @@ from line_coding_schemes import AMI
 # import PIL.Image
 from tkinter import *
 import matplotlib.image as mpimg
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 from matplotlib.figure import Figure
 from line_coding_schemes import *
 import utilities as utils
@@ -239,6 +239,7 @@ x.pack(side = LEFT)
 
 
 canvas = FigureCanvasTkAgg(fig, bottom_frame)
+NavigationToolbar2Tk(canvas, app)
 canvas.get_tk_widget().pack(side = TOP)
 
 # bottom_frame.place(x=750,y=780,anchor = "center")
