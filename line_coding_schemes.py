@@ -231,7 +231,7 @@ def HDB_3(message):
         i=0    #"110000 0000 1100001001"
         c=0    # counter
         while(i<len(b)):
-            print(len(b))
+            
             if(i<=(len(b)-4) and b[i]=='0' and b[i+1]=='0' and b[i+2]=='0' and b[i+3]=='0'and i!=0):
                 if(change == -1):
                     if(c%2==1):
@@ -276,4 +276,3 @@ def HDB_3(message):
                     change = 1
                     c+=1
         return output
-print(HDB_3("110000"))
