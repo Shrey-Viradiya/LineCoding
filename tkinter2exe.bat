@@ -1,0 +1,1 @@
+pyinstaller.exe --onefile --icon=LOGO.ico application.py
