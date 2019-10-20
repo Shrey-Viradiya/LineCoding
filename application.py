@@ -21,6 +21,7 @@ app = Tk()
 app.title("Line Coding Visualization")
 app.geometry('1366x758')
 app.configure(background='#888888')
+app.wm_iconbitmap('LOGO.ico')
 
 top_frame = Frame(app, bg = '#888888')
 top_frame.pack(side = TOP)
