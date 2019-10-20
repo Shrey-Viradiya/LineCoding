@@ -225,13 +225,14 @@ def  B8ZS(message):
     
 def HDB_3(message):
         output = []
-        b = text2binary(message)
-        # b = "110000100000101100001"
+        #b = text2binary(message)
+        b = "110000"
         change = 1
         i=0    #"110000 0000 1100001001"
         c=0    # counter
         while(i<len(b)):
-            if(i<(len(b)-4) and b[i]=='0' and b[i+1]=='0' and b[i+2]=='0' and b[i+3]=='0'and i!=0):
+            print(len(b))
+            if(i<=(len(b)-4) and b[i]=='0' and b[i+1]=='0' and b[i+2]=='0' and b[i+3]=='0'and i!=0):
                 if(change == -1):
                     if(c%2==1):
                         output.append(0)
@@ -275,3 +276,4 @@ def HDB_3(message):
                     change = 1
                     c+=1
         return output
+print(HDB_3("110000"))
